@@ -1,0 +1,30 @@
+@mixin logoLayout() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin text($font-size) {
+  font-size: $font-size;
+  padding-bottom: 1rem;
+  color: $Dark-Grayish-Blue;
+}
+
+@mixin paragraph {
+  font-size: clamp(calc($base-font - 0.2rem), 1.2vw, calc($base-font + 1.1rem));
+  line-height: 1.7;
+  color: $Grayish-Blue;
+  margin-bottom: calc($margin-bottom-base + 1rem);
+}
+
+@mixin button($bg-color) {
+  display: block;
+  padding: 1.5rem 2rem;
+  text-decoration: none;
+  color: white;
+  font-size: $base-font;
+  border-radius: 3rem;
+  margin-bottom: calc($margin-bottom-base - 1rem);
+  background-color: $bg-color;
+}

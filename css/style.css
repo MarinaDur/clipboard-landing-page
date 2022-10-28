@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: auto;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  text-align: center;
+}
+
+h2 {
+  font-size: clamp(2.9rem, 2vw, 3.8rem);
+  padding-bottom: 1rem;
+  color: hsl(210deg, 10%, 33%);
+}
+
+h3 {
+  font-size: clamp(2.3rem, 0.2vw, 2.8rem);
+  padding-bottom: 1rem;
+  color: hsl(210deg, 10%, 33%);
+}
+
+p {
+  font-size: clamp(1.6rem, 1.2vw, 2.9rem);
+  line-height: 1.7;
+  color: hsl(201deg, 11%, 66%);
+  margin-bottom: 5rem;
+}
+
+.header__image {
+  background: url(../images/bg-header-mobile.png) no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 30rem;
+  width: 100%;
+}
+
+.header__image-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 11.5rem;
+}
+
+.header__info {
+  padding: 3.3rem;
+  margin-bottom: 4rem;
+}
+.header__info h1 {
+  font-size: clamp(3.1rem, 5vw, 4.8rem);
+  padding-bottom: 1rem;
+  color: hsl(210deg, 10%, 33%);
+}
+
+.btn-mobile {
+  display: block;
+  padding: 1.5rem 2rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1.8rem;
+  border-radius: 3rem;
+  margin-bottom: 3rem;
+  background-color: hsl(171deg, 66%, 44%);
+  box-shadow: 0 12px 10px -5px hsl(170deg, 25%, 81%);
+  transition: all 0.2s ease-in-out;
+}
+.btn-mobile:hover {
+  background-color: #29c7af;
+}
+
+.btn-desk {
+  display: block;
+  padding: 1.5rem 2rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1.8rem;
+  border-radius: 3rem;
+  margin-bottom: 3rem;
+  background-color: hsl(233deg, 100%, 69%);
+  box-shadow: 0 12px 10px -5px hsl(233deg, 47%, 89%);
+}
+.btn-desk:hover {
+  background-color: #7081ff;
+}
+
+.first-section-info {
+  padding: 3.3rem;
+  margin-bottom: 4rem;
+}
+
+.first-section-info__image {
+  margin-bottom: 4rem;
+}
+.first-section-info__image img {
+  width: 100%;
+}
+
+.second-section-info {
+  padding: 3.3rem;
+  margin-bottom: 2.5rem;
+}
+
+.second-section-info__image img {
+  width: 100%;
+}
+
+.third-section-workflow {
+  padding: 3.3rem;
+}
+.third-section-workflow img {
+  width: 4rem;
+  margin-bottom: 4rem;
+}
+
+.section-logos {
+  padding: 3.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+.section-logos img {
+  width: 12rem;
+}
+
+.download-section {
+  padding: 3.3rem;
+  margin-bottom: 6rem;
+}
+
+footer {
+  background-color: hsl(206deg, 17%, 92%);
+}
+
+.footer__logo__nav img {
+  width: 5rem;
+  margin-top: 3rem;
+}
+
+.footer__nav ul {
+  margin: 3rem 0;
+  list-style: none;
+  display: grid;
+  grid-template-rows: repeat(5, auto);
+  row-gap: 3rem;
+  text-transform: capitalize;
+  font-size: 1.9rem;
+  color: hsl(210deg, 10%, 33%);
+  cursor: pointer;
+}
+.footer__nav ul li:hover {
+  color: hsl(171deg, 66%, 44%);
+}
+
+.footer__social-logo img {
+  width: 2.5rem;
+  margin: 3rem 1.5rem;
+}
+
+@media screen and (min-width: 930px) {
+  .header__image {
+    background: url(../images/bg-header-desktop.png) no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 40rem;
+  }
+  .header__info {
+    width: 60vw;
+    margin-bottom: 15rem;
+  }
+  .btn {
+    display: inline;
+    padding: 1.3rem 3.5rem;
+    font-size: 1.6rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  .first-section-info {
+    padding: 0;
+  }
+  .first-section-info__image__info {
+    display: flex;
+    text-align: left;
+    align-items: center;
+  }
+  .first-section-info__image {
+    margin-right: 0;
+    width: 50%;
+  }
+  .first-section-info__image img {
+    margin-left: -10rem;
+    width: 100%;
+  }
+  .first-section-info__info {
+    width: 50vw;
+  }
+  .first-section-info__capabilities {
+    max-width: 40vw;
+    margin-left: 0;
+  }
+  .second-section-info__info {
+    width: 60vw;
+  }
+  .second-section-info__image img {
+    width: 60vw;
+  }
+  .third-section-workflow__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 5rem;
+    padding: 0 10rem;
+    align-self: center;
+  }
+  .section-logos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 0;
+    justify-items: center;
+    margin-top: 5rem;
+  }
+  .section-logos img {
+    width: 15rem;
+  }
+  .download-section {
+    width: 60vw;
+    margin-top: 10rem;
+  }
+  .footer {
+    display: flex;
+  }
+  .footer img {
+    justify-self: center;
+  }
+  .footer__logo__nav {
+    display: flex;
+    gap: 5rem;
+  }
+  .footer__nav ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    column-gap: 10rem;
+    row-gap: 2rem;
+    font-size: 1.5rem;
+    text-align: left;
+  }
+  .footer__nav ul li {
+    text-align: left;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

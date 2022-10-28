@@ -1,0 +1,269 @@
+//Header section
+
+.header__image {
+  background: url(../images/bg-header-mobile.png) no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 30rem;
+  width: 100%;
+}
+
+.header__image-logo {
+  @include logoLayout;
+  width: 11.5rem;
+}
+
+.header__info {
+  padding: $base-padding;
+  margin-bottom: $margin-bottom-base;
+
+  h1 {
+    @include text($header-font-size);
+  }
+}
+
+//buttons
+
+.btn-mobile {
+  @include button($Strong-Cyan);
+  box-shadow: $shadow hsl(170, 25%, 81%);
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: lighten($Strong-Cyan, 3%);
+  }
+}
+
+.btn-desk {
+  @include button($Light-Blue);
+  box-shadow: $shadow hsl(233, 47%, 89%);
+  &:hover {
+    background-color: lighten($Light-Blue, 3%);
+  }
+}
+
+//first info section
+
+.first-section-info {
+  padding: $base-padding;
+  margin-bottom: $margin-bottom-base;
+}
+
+.first-section-info__image {
+  margin-bottom: $margin-bottom-base;
+  img {
+    width: 100%;
+  }
+}
+
+//second section
+
+.second-section-info {
+  padding: $base-padding;
+  margin-bottom: ($margin-bottom-base - 1.5rem);
+}
+
+.second-section-info__image {
+  img {
+    width: 100%;
+  }
+}
+
+//third section
+
+.third-section-workflow {
+  padding: $base-padding;
+
+  img {
+    width: 4rem;
+    margin-bottom: $margin-bottom-base;
+  }
+}
+
+//Logos section
+
+.section-logos {
+  padding: $base-padding;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  align-items: center;
+  margin-bottom: $margin-bottom-base;
+
+  img {
+    width: 12rem;
+  }
+}
+
+//Download section
+
+.download-section {
+  padding: $base-padding;
+  margin-bottom: calc($margin-bottom-base + 2rem);
+}
+
+//footer section
+
+footer {
+  background-color: $Grayish-Blue-light;
+}
+.footer__logo__nav {
+  img {
+    width: 5rem;
+    margin-top: 3rem;
+  }
+}
+
+.footer__nav {
+  ul {
+    margin: 3rem 0;
+    list-style: none;
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    row-gap: 3rem;
+    text-transform: capitalize;
+    font-size: calc($base-font + 0.1rem);
+    color: $Dark-Grayish-Blue;
+    cursor: pointer;
+
+    li:hover {
+      color: $Strong-Cyan;
+    }
+  }
+}
+
+.footer__social-logo {
+  img {
+    width: 2.5rem;
+    margin: 3rem 1.5rem;
+  }
+}
+
+//media
+@media screen and (min-width: 930px) {
+  //header
+  .header__image {
+    background: url(../images/bg-header-desktop.png) no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 40rem;
+  }
+
+  .header__info {
+    width: 60vw;
+    margin-bottom: 15rem;
+  }
+
+  //buttons
+  .btn {
+    display: inline;
+    padding: 1.3rem 3.5rem;
+    font-size: calc($base-font - 0.2rem);
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  //first section info
+
+  .first-section-info {
+    padding: 0;
+  }
+
+  .first-section-info__image__info {
+    display: flex;
+    text-align: left;
+
+    align-items: center;
+  }
+
+  .first-section-info__image {
+    margin-right: 0;
+    width: 50%;
+    img {
+      margin-left: -10rem;
+      width: 100%;
+    }
+  }
+
+  .first-section-info__info {
+    width: 50vw;
+  }
+
+  .first-section-info__capabilities {
+    max-width: 40vw;
+    margin-left: 0;
+  }
+
+  //second section
+
+  .second-section-info__info {
+    width: 60vw;
+  }
+
+  .second-section-info__image {
+    img {
+      width: 60vw;
+    }
+  }
+
+  //third section
+
+  .third-section-workflow__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 5rem;
+    padding: 0 10rem;
+    align-self: center;
+  }
+
+  //logo section
+  .section-logos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 0;
+    justify-items: center;
+    margin-top: 5rem;
+
+    img {
+      width: 15rem;
+    }
+  }
+
+  //download section
+
+  .download-section {
+    width: 60vw;
+    margin-top: 10rem;
+  }
+
+  //footer
+
+  .footer {
+    display: flex;
+
+    img {
+      justify-self: center;
+    }
+  }
+
+  .footer__logo__nav {
+    display: flex;
+    gap: 5rem;
+  }
+
+  .footer__nav {
+    ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
+      column-gap: 10rem;
+      row-gap: 2rem;
+      font-size: calc($base-font - 0.3rem);
+      text-align: left;
+
+      li {
+        text-align: left;
+      }
+    }
+  }
+}
